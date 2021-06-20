@@ -85,6 +85,12 @@ img {
   font-weight: 500;
   line-height: 1.143;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-menu-link:hover,
+.header-menu-link:focus {
+  color: var(--active-color);
 }
 
 .header-contacts-list {
@@ -108,6 +114,12 @@ img {
   font-weight: 500;
   line-height: 1.143;
   color: var(--grey-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--active-color);
 }
 
 .color {
@@ -123,15 +135,6 @@ img {
   border: 2px solid;
   border-radius: 2px;
   background: var(--active-color);
-}
-
-active {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.active:hover,
-.active:focus {
-  color: var(--active-color);
 }
 
 .link-icon {
@@ -347,7 +350,8 @@ active {
   align-items: center;
   border-radius: 50%;
   color: var(--color-svg);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons-link:hover,
@@ -394,8 +398,7 @@ active {
   border: 1px solid var(--color-svg);
   border-radius: 4px;
   color: var(--color-svg);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -406,12 +409,12 @@ active {
 
 .client-link-icon {
   fill: currentColor;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link-icon:hover,
 .client-link-icon:focus {
-  color: currentColor;
+  fill: currentColor;
 }
 
 /*  page portfolio styles */
@@ -437,19 +440,20 @@ active {
   outline: 1px solid #eeeeee;
 }
 
-.portfolio-cards-item {
+.portfolio-cards-link {
+  display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-cards-item:hover,
-.portfolio-cards-item:focus {
+.portfolio-cards-link:hover,
+.portfolio-cards-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
-.portfolio-cards-item:hover .pop-up-text,
-.portfolio-cards-item:focus .pop-up-text {
+.portfolio-cards-link:hover .pop-up-text,
+.portfolio-cards-link:focus .pop-up-text {
   transform: translateY(0);
 }
 
@@ -498,7 +502,8 @@ active {
   border-radius: 4px;
   padding: 6px 22px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -512,6 +517,7 @@ active {
 /* Paragraphs */
 .list-title-bold {
   margin-bottom: 4px;
+  color: var(--main-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -543,7 +549,7 @@ address {
   line-height: 1.714;
 }
 
-.footer-item .footer-item-link {
+.footer-item-link {
   color: rgba(255, 255, 255, 0.6);
 }
 
